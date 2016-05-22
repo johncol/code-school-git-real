@@ -1,0 +1,76 @@
+level 7
+
+git config --global color.ui true
+
+git log --pretty=oneline                        -> only hash and messgae
+git log --pretty=format:"%h %an %ad %s %d"      -> uses the format specified
+git log --oneline -p                            -> shows differences for each commit
+git log --oneline --stat                        -> shows number of additions and deletion per commit
+git log --oneline --graph                       -> show a console based graph
+
+git log --until=1.minute.ago
+git log --until=1.hour.ago
+git log --until=1.day.ago
+git log --until=1.week.ago
+git log --until=1.month.ago
+
+git log --since=1.minute.ago
+git log --since=1.hour.ago
+git log --since=1.day.ago
+git log --since=1.week.ago
+git log --since=1.month.ago
+
+git log --since=60.minutes.ago --until=30.minutes.ago
+git log --since=2016-03-01 --until=2016-04-01
+
+git diff                  -> shows differences in working directory
+git diff HEAD             -> shows differences in working directory
+git diff HEAD~            -> shows differences of the last commit
+git diff HEAD~2           -> shows differences of the last 2 commits
+git diff HEAD~n           -> shows differences of the last n commits
+git diff HEAD~n ..HEAD~m  -> shows differences between the nth commit and the mth one, n > m
+
+git diff commit_hash1 commit_hash2    -> differences between both commits
+git diff commit_hash1..commit_hash2   -> differences between both commits
+git diff branch1 branch2
+
+git blame index.html --date short
+
+.git/info/exclude   -> file to ignore files based on names patterns from your local repository
+.gitignore          -> file to ignore files based on names patterns repository
+
+git rm <file>                   -> remove a file from your repository
+git rm --cached <filename>      -> remove a file from your repository. but not your fil system (probably is put in .gitignore or .git/info/exclude)
+
+git config --global user.name "John"
+git config --global user.email "john@mail.com"
+git config --global core.editos emacs           -> use emac for interactive commands
+git config --global merge.tool opendiff         -> use opendiff for merging conflicts
+
+git config user.email "john@mail.com"           -> sets the use email for this repository
+
+git config --global alias.mylog "log --pretty=format:'%h %s [%an]'"
+git mylog
+
+git config --global alias.cm    "git checkout master"
+git config --global alias.pl    "git pull"
+git config --global alias.ps    "git push"
+git config --global alias.f     "git fetch"
+
+challenge:
+
+git log --pretty=oneline
+git diff
+git diff master elephant
+git diff HEAD~2
+git log --oneline -p
+git blame index.html
+
+.gitignore:
+#Enter text here
+logs/*.log
+
+git config user.email "admin@example.com"
+git config --global user.name "John"
+
+git config --global alias.beholdmyamazingcode "commit"
