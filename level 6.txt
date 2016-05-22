@@ -1,0 +1,44 @@
+level 6
+
+git rebase:
+1) move all local commits to a temporary area
+2) apply, commit per commit, all the commits in the remote branch
+3) then it's going to apply all the commits that were previously moved to the temporary area, this way GIT s not going to create a 'merge' commit, because in fact, a merge was never done, aonly a bunch of commits
+
+git checkout admin
+git rebase master
+git checkout master
+git merge admin
+
+git rebase --continue  -> confirm that a conflict resulted in the reabse rpocess was solved (o sea, after the conlicted file was added to stage)
+git rebase --skip
+git rebase --abort
+
+challenge:
+
+git checkout kennel
+git rebase master
+git merge kennel
+git fetch
+git rebase
+git fetch
+git rebase
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Our Cat-alog</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="cat.html">Cats</a></li>
+        <li><a href="dog.html">Dogs</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
+
+git add index.html
+git rebase --continue
