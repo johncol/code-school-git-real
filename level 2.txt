@@ -1,0 +1,26 @@
+level 2
+
+git reset HEAD <file_name>
+git add -a -m "commit message" -> add to stage and commit all modified and already tracked files
+git reset --soft HEAD^ -> undo last commit and leave changes on stage (according to video use ^, but it's not working, use instead ~):
+git reset --soft HEAD~
+git commit --amend -m "new commit message" -> add new staged changed to the last commit and replace its message with the one specified here
+git reset --hard HEAD~ -> undo last commit and remove changes from working directory 
+git reset --hard HEAD~2 -> undo last 2 commits and remove changes from working directory 
+git remote add <remote_name> <remote_url>
+git remote -v -> list remotes
+git remote rm <remote_name>
+
+
+challenge:
+git add osctrach.html
+git reset HEAD osctrach.html
+git commit -am "Add cats links to index.html"
+git commit --amend -m "Add cats links to index.html and new cats.html"
+git reset --soft HEAD~
+git reset HEAD cats.html index.html
+git checkout -- cats.html index.html
+git commit -am "Add offers banner to index.html"
+git reset --hard HEAD~
+git remote add origin git@example.com:example/petshop.git
+git push -u origin master
