@@ -1,0 +1,35 @@
+level 5
+
+git branch -> list local branches
+git branch -r -> list all branches
+
+git remote show origin -> see branches that exist in the remote 'origin' and their local version
+
+git push origin :<branch_name> -> delete remote branch 
+git branch -d <branch_name> -> delete branch 
+git branch -D <branch_name> -> delete branch 
+
+git remote prune -> clean all stale (those who had a remote version, but that remote version was deleted) branches
+
+git push origin <local_branch_name>:<remote_branch_name> -> push changes from local_branch_name to remote_branch_name
+
+a TAG is a name, a reference given to a specific commit, like HEAD that is always pointing to the last commit done in the working branch
+
+git tag -> list tags
+git checkout <tag_name> -> checkout the tag, that commit to which the tag is pointing to
+git tag -a <tag_name> -m "tag description" -> create a tag in the last commit 
+git push --tags -> push the tags
+
+challenge:
+
+git push origin hamsters
+git branch -r
+git fetch
+git branch -r
+git push origin :weasel
+git remote show origin
+git remote prune origin
+git tag
+git tag -a v1.3.2 -m "v1.3.2 tag"
+git push --tags origin
+git checkout v1.3.1
