@@ -1,0 +1,25 @@
+level 1
+
+git remote add origin http://...
+git diff --staged
+git branch <branch_name> -> create a new branch, do not checkout it
+git checkout -b <branch_name> -> create a new branch, do checkout it
+git help <command_name>
+git rm -- <file_name> -> delete a file and add the change to the stage
+git reset <file_name> -> remove file from staggin area
+git checkout <file_name> -> revert local changes on non staged file
+git push -u origin master -> use -u to remember "origin master", and later only type "git push"
+
+challenge:
+
+git help config
+git config --global user.name "John Cely"
+git config --global user.email "john.19col@gmail.com"
+
+git init
+git status
+git add index.html
+git commit -m "Create index.html"
+
+git add css/
+git log
