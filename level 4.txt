@@ -1,0 +1,29 @@
+level 4
+
+git pull origin master -> git fetch AND git merge origin/master
+
+git commit -a -> "commit changes after resolving conflicts"
+
+challenge:
+
+git push
+git pull
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Our Cat-alog</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="cat.html">Cats</a></li>
+        <li><a href="dog.html">Dogs</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
+
+git add index.html
+git commit -m "Conflicts resolved"
