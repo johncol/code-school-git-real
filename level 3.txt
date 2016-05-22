@@ -1,0 +1,19 @@
+level 3
+
+git clone https://github.com/johncol/code-school-git-real.git
+git clone https://github.com/johncol/code-school-git-real.git folder_name
+
+git branch <branch_name>
+git checkout <branch_name>
+git merge <branch_name>
+
+git checkout -b <branch_name>
+
+challenge:
+
+git clone git@example.com:example/petshop.git
+git branch grooming
+git checkout grooming
+git checkout master
+git merge grooming
+git checkout -b octopus
